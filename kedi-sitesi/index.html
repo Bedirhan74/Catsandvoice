@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#9f6bff">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Kediciklerimis  🐱</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐱</text></svg>">
+    <meta name="theme-color" content="#9f6bff">
+</head>
+<body>
+    <!-- Sol üst köşedeki yazı -->
+    <div class="corner-text">Yağmur'un kedisleri</div>
+    
+    <div class="container">
+        <h1>🐱 Kedisler</h1>
+        <div class="cats-grid">
+            <div class="cat-card" data-sound="cat-meow-14536.mp3">
+                <img src="images/indir.jpeg" alt="Kedi 1">
+                <p>Kedo</p>
+            </div>
+            <div class="cat-card" data-sound="cat-meow-8-fx-306184.mp3">
+                <img src="images/indir (1).jpeg" alt="Kedi 2">
+                <p>Kedodo</p>
+            </div>
+            <div class="cat-card" data-sound="cute-cat-352656.mp3">
+                <img src="images/indir (2).jpeg" alt="Kedi 3">
+                <p>Kedivan</p>
+            </div>
+            <div class="cat-card" data-sound="kitten-calling-for-mother-cute-meowing-sound-332671.mp3">
+                <img src="images/images.jpeg" alt="Kedi 4">
+                <p>Kedirun</p>
+            </div>
+            <div class="cat-card" data-sound="sound-effect-cat-chattering-and-meowing-282900.mp3">
+                <img src="images/images (1).jpeg" alt="Kedi 5">
+                <p>Kedisleep</p>
+            </div>
+            <div class="cat-card" data-sound="sound-effect-cat-chirruping-and-meowing-282904.mp3">
+                <img src="images/images (2).jpeg" alt="Kedi 6">
+                <p>Kedicoktatlı</p>
+            </div>
+            <div class="cat-card" data-sound="angry-cat-hq-sound-effect-240675.mp3">
+                <img src="images/images (3).jpeg" alt="Kedi 7">
+                <p>Kedihappy</p>
+            </div>
+            <h2>Gecikmenin kusuruna bakma minik girl 💕</h2>
+            
+            <div class="notes-section">
+                <h3>📝 Bana bir not bırak</h3>
+                <form id="noteForm" class="note-form">
+                    <textarea id="userNote" placeholder="Notunuzu buraya yazın..." required></textarea>
+                    <button type="submit">Miuv</button>
+                </form>
+                
+                <div class="notes-list" id="notesList">
+                    <h4>📜 Notlar</h4>
+                    <!-- Notlar buraya eklenecek -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gizli notlar butonu -->
+    <button id="toggleNotesBtn" title="Gizli Notlar">🔒</button>
+    
+    <audio id="catSound" src=""></audio>
+    
+    <!-- Mobil Klavye Butonu -->
+    <button id="mobileKeyboardBtn" class="mobile-keyboard-btn" title="Gizli Kodlar">🔢</button>
+    
+    <!-- Gizli Resim Modalı -->
+    <div id="secretModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img src="images/ben.jpg" alt="Özel Resim" class="secret-image">
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
