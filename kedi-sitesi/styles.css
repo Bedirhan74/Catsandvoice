@@ -30,6 +30,42 @@
     font-family: 'Comic Neue', cursive;
 }
 
+/* Heart button styles */
+.heart-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #ff6b6b;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.heart-button:hover {
+    transform: scale(1.2);
+}
+
+/* Floating hearts animation */
+@keyframes float-up {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.heart {
+    position: fixed;
+    color: #ff6b6b;
+    font-size: 20px;
+    pointer-events: none;
+    animation: float-up 2s ease-out forwards;
+}
+
 body {
     background: linear-gradient(135deg, #fff5f5 0%, #f8f0ff 100%);
     min-height: 100vh;

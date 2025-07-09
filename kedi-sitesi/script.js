@@ -114,7 +114,57 @@ function setupTouchEvents() {
     });
 }
 
+// Heart animation function
+function createHeartAnimation(x, y) {
+    const heart = document.createElement('div');
+    heart.innerHTML = '❤️';
+    heart.className = 'heart';
+    heart.style.left = x + 'px';
+    heart.style.top = y + 'px';
+    
+    // Random size
+    const size = Math.random() * 20 + 10;
+    heart.style.fontSize = size + 'px';
+    
+    // Random rotation
+    const rotation = Math.random() * 360;
+    heart.style.transform = `rotate(${rotation}deg)`;
+    
+    // Random color
+    const colors = ['#ff6b6b', '#ff8e8e', '#ffb3b3', '#ffd8d8', '#ff9e9e'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    heart.style.color = randomColor;
+    
+    document.body.appendChild(heart);
+    
+    // Remove the heart after animation completes
+    setTimeout(() => {
+        heart.remove();
+    }, 2000);
+}
+
+// Initialize heart button
+function initHeartButton() {
+    const heartButton = document.querySelector('.heart-button');
+    
+    heartButton.addEventListener('click', (e) => {
+        // Create multiple hearts
+        for (let i = 0; i < 20; i++) {
+            // Random position around the button
+            const x = e.clientX + (Math.random() - 0.5) * 100;
+            const y = e.clientY + (Math.random() - 0.5) * 100;
+            
+            // Random delay for each heart
+            setTimeout(() => {
+                createHeartAnimation(x, y);
+            }, Math.random() * 500);
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize heart button
+    initHeartButton();
     const catCards = document.querySelectorAll('.cat-card');
     const catSound = document.getElementById('catSound');
     const noteForm = document.getElementById('noteForm');
